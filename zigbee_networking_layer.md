@@ -161,7 +161,7 @@ ZR 和 ZED 入网时，实际上是通过选择一个节点作为其父节点来
 
 **入网流程**
 
-![Join Network](../../images/zigbee_images-join-network.png)
+![Join Network](./images/zigbee_images-join-network.png)
 
 * 活动网络扫描：这是为了发现邻近可用的 ZigBee 网络。通过往每个信道发送信标请求来发起活动网络扫描，然后等待信标应答。每个信道默认是 0.5 秒的等待应答时间，这个时间也可以由应用层设置。当全部应答被收集起来后，由应用层通过选择 PAN ID 和信道，来选择一个网络加入。
 * 鉴权流程：当活动网络扫描完成，并且选择了一个合适的网络来加入。接下来就开始鉴权流程。需要注意，当鉴权开始时，入网节点已经有了网络地址（至少是临时地址），鉴权只发生在启用了安全的网络中。鉴权给安全中心（一般是协调器兼任）允许或拒绝加入网络的权限。当鉴权没有成功时，父节点会告诉入网设备离开网络，并且收回分配给入网设备的地址。一个伪装的节点可能会有网络地址，但没有收到安全中心发送的密钥，所以无法在网络中通信。
@@ -458,7 +458,7 @@ ZigBee 协议没有明确地规定路由表的维护策略，这一策略一般�
 
 抓出来的数据包的网络拓扑结果如下图
 
-![zigbee route discovery](../../images/zigbee_route_discovery.png)
+![zigbee route discovery](./images/zigbee_route_discovery.png)
 
 其中 0x0351 是个醒着的 ZED 设备，它是一个开关。0x796f 是协调器下面的一个子设备，它是一个睡眠设备，是一个电灯。每个设备的短地址都标在了其右侧。
 
@@ -557,7 +557,7 @@ STEP 3: power off router 0x143e, route discover again from 0x0351 to 0x796f
 
 一个完整的空中包包含很多层，主要有 MAC, NWK, APS, ZCL 等。下图是一个完整的空中包的帧结构
 
-![zigbee frame](../../images/zigbee_frame.png)
+![zigbee frame](./images/zigbee_frame.png)
 
 一些说明：
 
@@ -567,7 +567,7 @@ STEP 3: power off router 0x143e, route discover again from 0x0351 to 0x796f
 NWK MIC 只出现在启用了 NWK 层安全机制的网络中。APS 也有可选的安全机制，如果安全机制启用的情况下 APS AUX HDR 和 APS MIC 将出现在 APS 层数据帧中。
 * MAC 头和 NWK 头是为了在节点之间寻址的。MAC 头控制逐跳的寻址，NWK 头控制源节点到目的节点的寻址。所以 MAC 层的地址在每一跳都会改变，而 NWK 层的地址从头到尾都保持一致。
 
-![zigbee frame](../../images/zigbee_frame.png)
+![zigbee frame](./images/zigbee_frame.png)
 
 这是 MAC 和 NWK 帧头信息。APS 帧和 ZCL 帧不是本节的主要内容，就不详细介绍。
 
