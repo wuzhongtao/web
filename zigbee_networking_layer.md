@@ -73,7 +73,7 @@ Zigbee 是异步的通信机制，它使用 MAC 层提供的 CSMA-CA (Carrier-Se
 
 **组网的流程**
 
-![Form Network](../../images/zigbee_images-form-network.png)
+![Form Network](./images/zigbee_images-form-network.png)
 
 * 发起组网：组网上由应用层发起的
 * 信号强度扫描：ZigBee 会调用 MAC 的功能来扫描信号强度，以便决定使用哪个信道来通信。扫描时，会把 16 个信道 (11–26)全部扫描一遍，每个信道扫描时间大概是 0.5 秒，总共需要花费 8 秒时间。
