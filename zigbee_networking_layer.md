@@ -26,7 +26,7 @@ IEEE 802.15.4 没有定义**多跳传输**，**地址分配**，和**应用层�
 
 Zigbee 是建立在 802.15.4 上的最主要的协议之一，它增加了网络层来支持**点对点多跳网状网络**，增加了安全层来处理**网络安全**，还增加了应用层来实现**应用程序互操作**。
 
-![zigbee architecture](http://moodle.utc.fr/file.php/498/SupportWeb/res/zigbee-architecture.png)
+![zigbee architecture](./images/zigbee_architecture.png)
 *（图片来自网络，侵删）*
 
 * 物理层 (PHY)：负责把数据通过 RF 频谱发送出去；或者接收来自 RF 频谱上的数据。
@@ -347,7 +347,7 @@ Acknowledged            | No        | Yes       | Yes       | Yes
 
 ### 广播
 
-![broadcast](http://masters.donntu.org/2010/fknt/zub/diss/broadcast.gif)
+![broadcast](./images/broadcast.gif)
 
 *图片来自网络，侵删*
 
@@ -434,7 +434,7 @@ Acknowledged            | No        | Yes       | Yes       | Yes
 
 当路由建立起来后，所有从源节点到目的节点的数据包将沿着这条路由来发送。此时即使这条路由的路径成本不是最低的了，只要数据沿着这条路由能送达，就不会重新发起路由发现过程。除非这条路由不可用了，数据包无法送达，这个时候源节点才会再发起一次路由发现过程。应用层可以手动发起路由发现过程，这样确保要传送的某个数据包沿着路径成本最低的路由传送。但需要注意，这种行为尽量少用，因为路由发现过程用了广播，频繁使用可能导致网络拥塞。另外，路由发现过程可能持续 1 - 2 秒，时间成本也比较高。
 
-![route discovery](http://www.rfwireless-world.com/images/zigbee_network.jpg)
+![route discovery](./images/zigbee_network.jpg)
 
 *图片来自网络，侵删*
 
