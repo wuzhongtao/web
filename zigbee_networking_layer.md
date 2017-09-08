@@ -436,8 +436,6 @@ Acknowledged            | No        | Yes       | Yes       | Yes
 
 ![route discovery](./images/zigbee_network.jpg)
 
-*图片来自网络，侵删*
-
 上图是一个典型的 ZigBee 网络，可以在上面模拟路由发现过程。也可以演示为什么设备密度大或功率灵敏度高的网络通信速度较快。
 
 #### 路由表
