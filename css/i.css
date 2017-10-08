@@ -1,0 +1,37 @@
+.picScroll-left{  overflow:hidden; position:relative; width:1100px; }
+		.picScroll-left .bd{ padding:2px;   }
+		.picScroll-left .bd ul{ overflow:hidden; zoom:1; }
+		.picScroll-left .hd{display:none;}
+.plist{
+	margin-top:22px;
+}
+
+.plist li{
+	width:240px; margin-right:10px;  float:left; text-align:center;
+}
+
+
+.plist li a.img{
+	display:table-cell; height:200px; vertical-align:middle; text-align:center;   border:solid 1px #ece1e0; overflow:hidden; border-radius:5px;
+	width:240px; 
+}
+
+.plist li a.img img{
+	max-width:240px; max-height:200px; opacity:0.9;  transition: all 0.6s;  
+}
+
+.plist li:hover a.img img{
+	opacity:1; transform: scale(1.05);  
+}
+
+.plist li:hover a.img{
+	border-color:#D22D27; color:#D22D27;
+}
+
+.plist li a.txt{
+	display:block; height:28px; line-height:28px; text-align:center; color:#666; margin-top:8px; text-decoration:none; margin-bottom:20px;
+}
+ 
+.plist li:hover a.txt{
+	 color:#D22D27;
+}	

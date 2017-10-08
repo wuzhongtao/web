@@ -1,0 +1,19 @@
+.nlist li{
+	height:29px; line-height:29px; border-bottom:dashed 1px #ccc;
+}
+
+.nlist li a{
+	color:#555;
+}
+
+.nlist li span{
+	float:right; font-size:12px;
+}
+
+.stitle{
+	height:45px; text-align:center; font-size:20px; line-height:45px; color:black;
+}
+
+.sinfo{
+	height:23px; line-height:23px; text-align:center; color:#666; margin:5px 0px;
+}
